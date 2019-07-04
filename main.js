@@ -15,7 +15,7 @@ document.querySelector("#answer1").innerHTML = ans
 var range = items.filter((prices) => {
     return prices.price <=18 && prices.price >= 14 
 }).map((name) => {
-    return name.title
+    return `${name.title} \n` 
 }).slice(1,4)
 
 document.querySelector("#answer2").innerHTML = range
@@ -25,7 +25,7 @@ var currency = items.filter((x) => {
  }).map((y) => {
      let name = y.title
      let price = y.price
-     return `${name} costs ${price}`
+     return `${name} costs ${price} `
  })
 
  document.querySelector("#answer3").innerHTML = currency.toString()
@@ -38,12 +38,16 @@ var currency = items.filter((x) => {
              return getWood
          }
      }
-     return 
+     return
  }).map((y) => {
      let name = y.title;
-      return `${name} is made of wood`   
+      return `${name} is made of wood \n`   
      })
 
+document.querySelector("#answer4").innerHTML =   wood.toString()
 
-console.log(wood)
+//Question 5
 
+var eight = items.reduce((x, y) => {
+
+})
