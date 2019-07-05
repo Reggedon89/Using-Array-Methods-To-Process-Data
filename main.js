@@ -65,11 +65,11 @@ items.forEach(function(item, i){
 });
 document.querySelector("#answer5").innerHTML += '</ul>';
 
-const homie = items.filter((item) => {
+let homie = items.filter((item) => {
     return item.who_made === 'i_did'
 }).length
 
 
 let handMade = `${homie} were made by their sellers`
 
-document.querySelector("#answer6").innerHTML += handMade;
+document.querySelector("#answer6").innerHTML = handMade;
