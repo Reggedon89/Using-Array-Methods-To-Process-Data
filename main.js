@@ -44,10 +44,24 @@ var currency = items.filter((x) => {
       return `${name} is made of wood \n`   
      })
 
-document.querySelector("#answer4").innerHTML =   wood.toString()
+document.querySelector("#answer4").innerHTML = wood.toString()
 
 //Question 5
 
-var eight = items.reduce((x, y) => {
 
+
+
+var eight = items.forEach((meight) => {
+    if (meight.materials.length >= 8){
+    let b = meight.materials
+    b.forEach((x) => {
+        
+    })
+}
 })
+
+
+
+
+
+document.querySelector("#answer5").innerHTML = eight
