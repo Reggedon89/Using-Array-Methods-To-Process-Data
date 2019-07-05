@@ -50,18 +50,26 @@ document.querySelector("#answer4").innerHTML = wood.toString()
 
 
 
+document.querySelector("#answer5").innerHTML = '<ul>';
+items.forEach(function(item, i){
+   let item_count = item.materials.length
+   if(item_count >= 8){
+       document.querySelector("#answer5").innerHTML += '<b>Name:</b> ' +item.title + '<br>';
+       document.querySelector("#answer5").innerHTML += '<b># of Items:</b> ' +item_count + '<br>';
+       document.querySelector("#answer5").innerHTML += '<ul id="list_'+i+'">';
+       document.querySelector("#answer5").innerHTML += '</ul>';
+       item.materials.forEach(function(material, id){
+           document.querySelector("#list_"+i).innerHTML += '<li>' + material + '</li>';
+       });
+   }
+});
+document.querySelector("#answer5").innerHTML += '</ul>';
 
-var eight = items.forEach((meight) => {
-    if (meight.materials.length >= 8){
-    let b = meight.materials
-    b.forEach((x) => {
-        
-    })
-}
-})
+const homie = items.filter((item) => {
+    return item.who_made === 'i_did'
+}).length
 
 
+let handMade = `${homie} were made by their sellers`
 
-
-
-document.querySelector("#answer5").innerHTML = eight
+document.querySelector("#answer6").innerHTML += handMade;
