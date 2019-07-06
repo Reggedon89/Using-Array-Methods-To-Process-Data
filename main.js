@@ -72,4 +72,6 @@ let homie = items.filter((item) => {
 
 let handMade = `${homie} were made by their sellers`
 
+
+
 document.querySelector("#answer6").innerHTML = handMade;
